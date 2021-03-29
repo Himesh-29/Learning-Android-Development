@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="welcome_to_a_gk_quiz">Welcome to a GK Quiz</string>
+    <string name="question_text">question</string>
+    <string name="option1_text">option1</string>
+    <string name="option2_text">option2</string>
+    <string name="instructions_and_score_display">Click on the option on which you want to mark your answer, then you will redirected automatically to next question. You will get 1 point for correct answer and 0 points for wrong answer</string>
+</resources>
