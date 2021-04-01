@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     private Button music1;
     private Button music2;
     private Button music3;
-    private SeekBar seekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +37,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!mediaplayer.isPlaying()&&!mediaplayer2.isPlaying()&&!mediaplayer3.isPlaying()){
-                    Toast.makeText(MainActivity.this, "First select a music to play it!!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MainActivity.this, "First select a music to play it!!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         music1.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+
                 if(mediaplayer2.isPlaying()) {
                     mediaplayer2.pause();
                 }
                 if(mediaplayer3.isPlaying()) {
                     mediaplayer3.pause();
                 }
+
                 mediaplayer.setLooping(true);
                 if(mediaplayer.isPlaying()){
                     playPause.setText("Pause");
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     mediaplayer3.pause();
                 }
 
-               mediaplayer2.setLooping(true);
+                mediaplayer2.setLooping(true);
                 if(mediaplayer2.isPlaying()){
                     playPause.setText("Pause");
                 }
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         music3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(mediaplayer2.isPlaying()) {
                     mediaplayer2.pause();
                 }
@@ -130,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     playPause.setText("Play");
                 }
+
                 playPause.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
